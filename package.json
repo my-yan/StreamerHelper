@@ -1,0 +1,42 @@
+{
+  "name": "streamer_helper",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "watch": "tsc -w --project tsconfig.json && tsc-alias -w -p tsconfig.json",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "serve": "npm run build && pm2 start ./dist/index.js",
+    "dev": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json && node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZhangMingZhao1/StreamerHelper.git"
+  },
+  "author": "ZhangMingZhao1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZhangMingZhao1/StreamerHelper/issues"
+  },
+  "homepage": "https://github.com/ZhangMingZhao1/StreamerHelper#readme",
+  "dependencies": {
+    "axios": "0.19.2",
+    "chalk": "^4.1.0",
+    "crypto-js": "^4.0.0",
+    "dayjs": "^1.8.17",
+    "filehound": "^1.17.4",
+    "form-data": "^3.0.0",
+    "log4js": "^5.3.0",
+    "md5-node": "^1.0.1",
+    "node-rsa": "^1.0.8",
+    "qs": "^6.9.4",
+    "retry-axios": "^2.4.0",
+    "terminal-image": "^1.2.1",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node-rsa": "^1.1.0",
+    "tsc-alias": "^1.2.6",
+    "typescript": "^3.7.4"
+  }
+}
